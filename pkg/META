@@ -1,0 +1,21 @@
+description = "Portable shim for MirageOS APIs"
+version = "%%VERSION_NUM%%"
+requires = ""
+
+archive(byte,unix) = "unix/mirage-os-shim.cma"
+archive(native,unix) = "unix/mirage-os-shim.cmxa"
+plugin(byte,unix) = "unix/mirage-os-shim.cma"
+plugin(native,unix) = "unix/mirage-os-shim.cmxs"
+requires(unix) = "mirage-unix"
+
+archive(byte,xen) = "xen/mirage-os-shim.cma"
+archive(native,xen) = "xen/mirage-os-shim.cmxa"
+plugin(byte,xen) = "xen/mirage-os-shim.cma"
+plugin(native,xen) = "xen/mirage-os-shim.cmxs"
+requires(xen) = "mirage-xen"
+
+archive(byte,solo5) = "solo5/mirage-os-shim.cma"
+archive(native,solo5) = "solo5/mirage-os-shim.cmxa"
+plugin(byte,solo5) = "solo5/mirage-os-shim.cma"
+plugin(native,solo5) = "solo5/mirage-os-shim.cmxs"
+requires(solo5) = "mirage-solo5"
