@@ -10,19 +10,18 @@ tags: []
 build: [
   "ocaml" "pkg/pkg.ml" "build"
           "--pinned" "%{pinned}%"
+          "--with-mirage-unix" "%{mirage-unix:installed}%"
           "--with-mirage-xen" "%{mirage-xen:installed}%"
           "--with-mirage-solo5" "%{mirage-solo5:installed}%"
-          "--with-ocaml-freestanding" "%{ocaml-freestanding:installed}%"
 ]
 depends: [
   "ocamlfind" {build}
   "ocamlbuild" {build}
   "topkg" {build}
-  "mirage-unix"
 ]
 depopts: [
+  "mirage-unix"
   "mirage-solo5"
-  "ocaml-freestanding"
   "mirage-xen"
 ]
 available: [ ocaml-version >= "4.02.0"]
