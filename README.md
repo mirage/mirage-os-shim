@@ -10,7 +10,7 @@ respective backends.
 Clients need to be compiled against the common `mirage_OS.cmi`, and use the
 module `Mirage_OS`. Final applications need to be linked using `ocamlfind`, and
 have to define one of the `ocamlfind` predicates corresponding to the actual
-`OS` implementations: `unix`, `xen`, or `solo5`.
+`OS` implementations: `mirage_unix`, `mirage_xen`, or `mirage_solo5`.
 
 When using `ocamlbuild`, this is
 `ocamlfind -use-ocamlfind -tag 'predicate(unix)'` or similar.
