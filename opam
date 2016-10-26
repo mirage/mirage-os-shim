@@ -18,9 +18,9 @@ depends: [
   "ocamlfind" {build}
   "ocamlbuild" {build}
   "topkg" {build}
+  "mirage-unix"
 ]
 depopts: [
-  "mirage-unix"
   "mirage-solo5"
   "mirage-xen"
 ]
