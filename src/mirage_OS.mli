@@ -28,7 +28,7 @@ module OS : sig
   end
 
   module Time : sig
-    val sleep : float -> unit Lwt.t
+    val sleep_ns : int64 -> unit Lwt.t
   end
 
 end

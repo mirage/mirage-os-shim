@@ -25,3 +25,4 @@ depopts: [
   "mirage-xen"
 ]
 available: [ ocaml-version >= "4.02.0"]
+# conflicts: ["mirage-types" {< "3.0.0"}]
