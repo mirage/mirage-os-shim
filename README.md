@@ -1,5 +1,5 @@
-mirage-os-shim — Portable shim for MirageOS APIs
--------------------------------------------------------------------------------
+## mirage-os-shim — Portable shim for MirageOS APIs
+
 %%VERSION%%
 
 mirage-os-shim is the intersection of the Mirage OS APIs exported under the `OS`
@@ -20,3 +20,5 @@ interface is pretty volatile. It is highly likely that you, in fact, do not need
 this package at all.
 
 mirage-os-shim is distributed under the ISC license.
+
+[![Build Status](https://travis-ci.org/pqwy/mirage-os-shim.svg?branch=master)](https://travis-ci.org/pqwy/mirage-os-shim)

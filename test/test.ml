@@ -11,5 +11,5 @@ let _ =
 
 let () =
   pr "> Will sleep.\n%!";
-  OS.(Main.run (Time.sleep_ns 1_000_000_000L));
+  OS.(Main.run (Time.sleep_ns 1_000_000L));
   pr "> How nice :)\n%!"
