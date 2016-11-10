@@ -17,10 +17,11 @@ depends: [
   "ocamlfind" {build}
   "ocamlbuild" {build}
   "topkg" {build}
-  "mirage-unix"
+  "lwt"
 ]
 depopts: [
   "mirage-solo5"
   "mirage-xen"
+  "mirage-unix"
 ]
 available: [ ocaml-version >= "4.01.0"]
