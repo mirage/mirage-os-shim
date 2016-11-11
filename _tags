@@ -2,7 +2,7 @@ true : bin_annot, safe_string, package(bytes)
 
 # THE BLUEPRINT!
 <src>: include
-<src/**>: package(mirage-unix)
+<src/**>: package(lwt)
 
 <unix>: include
 <unix/**>: package(mirage-unix)
