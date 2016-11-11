@@ -1,16 +1,12 @@
 true : bin_annot, safe_string, package(bytes)
 
 # THE BLUEPRINT!
-<src>: include
 <src/**>: package(lwt)
 
 <unix>: include
 <unix/**>: package(mirage-unix)
-<xen>: include
 <xen/**>: package(mirage-xen)
-<solo5>: include
 <solo5/**>: package(mirage-solo5)
 <{src,unix,xen,solo5}/*.mli>: opaque
 
-<test>: include
 <test/**>: package(mirage-unix)
