@@ -3,6 +3,7 @@
 <head>
 <link rel="stylesheet" href="style.css" type="text/css">
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="Start" href="index.html">
 <link rel="Up" href="Mirage_OS.html">
 <link title="Index of values" rel=Appendix href="index_values.html">
@@ -14,7 +15,14 @@
 &nbsp;</div>
 <h1>Module <a href="type_Mirage_OS.OS.html">Mirage_OS.OS</a></h1>
 
-<pre><span class="keyword">module</span> OS: <code class="code"><span class="keyword">sig</span></code> <a href="Mirage_OS.OS.html">..</a> <code class="code"><span class="keyword">end</span></code></pre><hr width="100%">
+<pre><span class="keyword">module</span> OS: <code class="code"><span class="keyword">sig</span></code> <a href="Mirage_OS.OS.html">..</a> <code class="code"><span class="keyword">end</span></code></pre><div class="info module top">
+A version of <code class="code"><span class="constructor">OS</span></code> portable across back-ends.
+<p>
+
+<pre class="codepre"><code class="code"><span class="keyword">open</span> <span class="constructor">Mirage_OS</span>
+<span class="keyword">let</span> _ = <span class="constructor">OS</span>.<span class="constructor">Main</span>.at_enter ...</code></pre><br>
+</div>
+<hr width="100%">
 
 <pre><span class="keyword">module</span> <a href="Mirage_OS.OS.Env.html">Env</a>: <code class="code"><span class="keyword">sig</span></code> <a href="Mirage_OS.OS.Env.html">..</a> <code class="code"><span class="keyword">end</span></code></pre>
 <pre><span class="keyword">module</span> <a href="Mirage_OS.OS.Lifecycle.html">Lifecycle</a>: <code class="code"><span class="keyword">sig</span></code> <a href="Mirage_OS.OS.Lifecycle.html">..</a> <code class="code"><span class="keyword">end</span></code></pre>

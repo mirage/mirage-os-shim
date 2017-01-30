@@ -3,6 +3,7 @@
 <head>
 <link rel="stylesheet" href="style.css" type="text/css">
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="Start" href="index.html">
 <link rel="Up" href="index.html">
 <link title="Index of values" rel=Appendix href="index_values.html">
@@ -19,10 +20,22 @@
 Portable shim for MirageOS APIs
 <p>
 
-    <em>v0.0.1 — <a href="https://github.com/pqwy/mirage-os-shim ">homepage</a></em><br>
+    You can open this module in a Mirage unikernel to gain access to the core OS
+    services. The implementation is resolved implicitly at link-time.
+<p>
+
+    <b>Note</b> This is a very special facility, designed to help other <em>core</em>
+    Mirage components avoid pervasive functorization. When in doubt, do <em>not</em>
+    use it.
+<p>
+
+    <em>v3.0.0 — <a href="https://github.com/pqwy/mirage-os-shim ">homepage</a></em><br>
 </div>
 <hr width="100%">
 <br>
 <h1 id="1_Interface">Interface</h1><br>
 
-<pre><span class="keyword">module</span> <a href="Mirage_OS.OS.html">OS</a>: <code class="code"><span class="keyword">sig</span></code> <a href="Mirage_OS.OS.html">..</a> <code class="code"><span class="keyword">end</span></code></pre></body></html>
+<pre><span class="keyword">module</span> <a href="Mirage_OS.OS.html">OS</a>: <code class="code"><span class="keyword">sig</span></code> <a href="Mirage_OS.OS.html">..</a> <code class="code"><span class="keyword">end</span></code></pre><div class="info">
+A version of <code class="code"><span class="constructor">OS</span></code> portable across back-ends.
+</div>
+</body></html>
