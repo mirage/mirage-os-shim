@@ -20,10 +20,6 @@
 let _ = OS.Main.at_enter ...]} *)
 module OS : sig
 
-  module Env : sig
-    val argv: unit -> (string array) Lwt.t
-  end
-
   module Lifecycle : sig
     val await_shutdown_request :
       ?can_poweroff:bool ->
