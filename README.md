@@ -21,4 +21,4 @@ this package at all.
 
 mirage-os-shim is distributed under the ISC license.
 
-[![Build Status](https://travis-ci.org/pqwy/mirage-os-shim.svg?branch=master)](https://travis-ci.org/pqwy/mirage-os-shim)
+[![Build Status](https://travis-ci.org/mirage/mirage-os-shim.svg?branch=master)](https://travis-ci.org/mirage/mirage-os-shim)
