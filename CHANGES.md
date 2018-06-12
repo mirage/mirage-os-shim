@@ -1,3 +1,7 @@
+## HEAD
+
+Adapt to OCaml 4.06.0 by enabling no-keep-locs.
+
 ## v3.0.0 2017-01-30
 
 Adapt to MirageOS 3.0.
