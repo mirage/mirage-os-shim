@@ -26,7 +26,7 @@ depopts: [
 ]
 available: [ ocaml-version >= "4.01.0"]
 conflicts: [
-  "mirage-unix" {<"3.0.0"}
-  "mirage-xen" {<"3.0.0"}
-  "mirage-solo5" {<"0.2.0"}
+  "mirage-unix" {< "3.0.0"}
+  "mirage-xen" {< "3.0.0"}
+  "mirage-solo5" {< "0.2.0"}
 ]
