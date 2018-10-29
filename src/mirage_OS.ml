@@ -2,7 +2,6 @@
    See LICENSE.md. *)
 
 module OS = struct
-  module Env = OS.Env
   module Lifecycle = OS.Lifecycle
   module Main = OS.Main
   module Time = OS.Time
