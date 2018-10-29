@@ -19,11 +19,6 @@
 {[open Mirage_OS
 let _ = OS.Main.at_enter ...]} *)
 module OS : sig
-
-  module Env : sig
-    val argv: unit -> (string array) Lwt.t
-  end
-
   module Lifecycle : sig
     val await_shutdown_request :
       ?can_poweroff:bool ->
@@ -41,5 +36,4 @@ module OS : sig
   module Time : sig
     val sleep_ns : int64 -> unit Lwt.t
   end
-
 end
