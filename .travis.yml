@@ -5,6 +5,7 @@ sudo: required
 env:
   global:
     - PACKAGE="mirage-os-shim"
+    - EXTRA_REMOTES="https://github.com/mirage/mirage-dev.git"
   matrix:
     - OCAML_VERSION=4.04 DEPOPTS=mirage-xen
     - OCAML_VERSION=4.04 DEPOPTS=mirage-unix
@@ -16,6 +17,4 @@ env:
     - OCAML_VERSION=4.06 DEPOPTS=mirage-solo5
 notifications:
   email: false
-
-# XXX FIXME: test with solo5
 
