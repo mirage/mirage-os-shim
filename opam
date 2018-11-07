@@ -1,10 +1,10 @@
-opam-version: "1.2"
+opam-version: "2.0"
 maintainer: "mirageos-devel"
 authors: ["David Kaloper Meršinjak <david@numm.org>"]
 homepage: "https://github.com/mirage/mirage-os-shim"
 doc: "https://mirage.github.io/mirage-os-shim/doc"
 license: "ISC"
-dev-repo: "https://github.com/mirage/mirage-os-shim.git"
+dev-repo: "git+https://github.com/mirage/mirage-os-shim.git"
 bug-reports: "https://github.com/mirage/mirage-os-shim/issues"
 tags: []
 build: [
@@ -17,6 +17,7 @@ depends: [
   "ocamlfind" {build}
   "ocamlbuild" {build}
   "topkg" {build}
+  "ocaml" {>= "4.04.0"}
   "lwt"
 ]
 depopts: [
@@ -24,9 +25,27 @@ depopts: [
   "mirage-xen"
   "mirage-unix"
 ]
-available: [ ocaml-version >= "4.01.0"]
 conflicts: [
-  "mirage-unix" {< "3.0.0"}
-  "mirage-xen" {< "3.0.0"}
-  "mirage-solo5" {< "0.2.0"}
+  "mirage-unix" {< "3.1.0"}
+  "mirage-xen" {< "3.1.0"}
+  "mirage-solo5" {< "0.5.0"}
 ]
+synopsis: "Portable shim for MirageOS OS API"
+description: """
+mirage-os-shim is the intersection of the Mirage OS APIs exported under the `OS`
+modules by various Mirage backends. It shims out this interface under the same
+`cmi`, and installs several implementations, that pass through to their
+respective backends.
+
+Clients need to be compiled against the common `mirage_OS.cmi`, and use the
+module `Mirage_OS`. Final applications need to be linked using `ocamlfind`, and
+have to define one of the `ocamlfind` predicates corresponding to the actual
+`OS` implementations: `mirage_unix`, `mirage_xen`, or `mirage_solo5`.
+
+When using `ocamlbuild`, this is
+`ocamlfind -use-ocamlfind -tag 'predicate(unix)'` or similar.
+
+**WARNING** Direct access to the `OS` interface is largely deprecated. The
+interface is pretty volatile. It is highly likely that you, in fact, do not need
+this package at all.
+"""
