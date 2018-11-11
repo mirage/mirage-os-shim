@@ -1,3 +1,7 @@
+## v3.1.0 2018-11-11
+
+remove (unused) OS.Env module
+
 ## v3.0.1 2018-06-15
 
 Adapt to OCaml 4.06.0 by enabling no-keep-locs.
