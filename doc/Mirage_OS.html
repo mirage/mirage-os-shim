@@ -16,26 +16,24 @@
 &nbsp;</div>
 <h1>Module <a href="type_Mirage_OS.html">Mirage_OS</a></h1>
 
-<pre><span class="keyword">module</span> Mirage_OS: <code class="code"><span class="keyword">sig</span></code> <a href="Mirage_OS.html">..</a> <code class="code"><span class="keyword">end</span></code></pre><div class="info module top">
-Portable shim for MirageOS APIs
-<p>
+<pre><span id="MODULEMirage_OS"><span class="keyword">module</span> Mirage_OS</span>: <code class="code"><span class="keyword">sig</span></code> <a href="Mirage_OS.html">..</a> <code class="code"><span class="keyword">end</span></code></pre><div class="info module top">
+<div class="info-desc">
+<p>Portable shim for MirageOS APIs</p>
 
-    You can open this module in a Mirage unikernel to gain access to the core OS
-    services. The implementation is resolved implicitly at link-time.
-<p>
+<p>You can open this module in a Mirage unikernel to gain access to the core OS
+    services. The implementation is resolved implicitly at link-time.</p>
 
-    <b>Note</b> This is a very special facility, designed to help other <em>core</em>
+<p><b>Note</b> This is a very special facility, designed to help other <em>core</em>
     Mirage components avoid pervasive functorization. When in doubt, do <em>not</em>
-    use it.
-<p>
+    use it.</p>
 
-    <em>v3.0.0 — <a href="https://github.com/pqwy/mirage-os-shim ">homepage</a></em><br>
+<p><em>v3.1.0 — <a href="https://github.com/mirage/mirage-os-shim ">homepage</a></em></p>
+</div>
 </div>
 <hr width="100%">
-<br>
-<h1 id="1_Interface">Interface</h1><br>
+<h2 id="1_Interface">Interface</h2>
+<pre><span id="MODULEOS"><span class="keyword">module</span> <a href="Mirage_OS.OS.html">OS</a></span>: <code class="code"><span class="keyword">sig</span></code> <a href="Mirage_OS.OS.html">..</a> <code class="code"><span class="keyword">end</span></code></pre><div class="info">
+<p>A version of <code class="code"><span class="constructor">OS</span></code> portable across back-ends.</p>
 
-<pre><span class="keyword">module</span> <a href="Mirage_OS.OS.html">OS</a>: <code class="code"><span class="keyword">sig</span></code> <a href="Mirage_OS.OS.html">..</a> <code class="code"><span class="keyword">end</span></code></pre><div class="info">
-A version of <code class="code"><span class="constructor">OS</span></code> portable across back-ends.
 </div>
 </body></html>
