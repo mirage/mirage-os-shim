@@ -4,31 +4,16 @@ authors: ["David Kaloper Meršinjak <david@numm.org>"]
 homepage: "https://github.com/mirage/mirage-os-shim"
 doc: "https://mirage.github.io/mirage-os-shim/doc"
 license: "ISC"
-dev-repo: "git+https://github.com/mirage/mirage-os-shim.git"
+dev-repo: "git+https://github.com/dune-universe/mirage-os-shim.git"
 bug-reports: "https://github.com/mirage/mirage-os-shim/issues"
 tags: []
 build: [
-  "ocaml" "pkg/pkg.ml" "build" "--pinned" "%{pinned}%" "--tests" "false"
-          "--with-mirage-unix" "%{mirage-unix:installed}%"
-          "--with-mirage-xen" "%{mirage-xen:installed}%"
-          "--with-mirage-solo5" "%{mirage-solo5:installed}%"
+  ["dune" "build" "-p" name "-j" jobs]
 ]
 depends: [
-  "ocamlfind" {build}
-  "ocamlbuild" {build}
-  "topkg" {build}
+  "dune" {build & >= "1.7"}
   "ocaml" {>= "4.04.0"}
   "lwt"
-]
-depopts: [
-  "mirage-solo5"
-  "mirage-xen"
-  "mirage-unix"
-]
-conflicts: [
-  "mirage-unix" {< "3.1.0"}
-  "mirage-xen" {< "3.1.0"}
-  "mirage-solo5" {< "0.5.0"}
 ]
 synopsis: "Portable shim for MirageOS OS API"
 description: """
