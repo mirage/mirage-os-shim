@@ -1,0 +1,4 @@
+(test
+  (name test)
+  (libraries mirage-os-shim mirage-unix)
+)
