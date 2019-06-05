@@ -1,5 +1,5 @@
 (library
-  (name mirage_os)
+  (name mirage_OS)
   (public_name mirage-os-shim)
   (virtual_modules OS)
   (libraries lwt))
