@@ -32,6 +32,4 @@ module Main : sig
   val at_enter_iter : (unit -> unit) -> unit
 end
 
-module Time : sig
-  val sleep_ns : int64 -> unit Lwt.t
-end
+module Time : Mirage_time_lwt.S

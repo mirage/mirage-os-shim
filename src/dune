@@ -1,5 +1,6 @@
 (library
   (name mirage_OS)
   (public_name mirage-os-shim)
+  (wrapped false)
   (virtual_modules OS)
-  (libraries lwt))
+  (libraries lwt mirage-time-lwt))
