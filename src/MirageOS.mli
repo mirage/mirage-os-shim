@@ -16,24 +16,13 @@
 
 (** A version of [OS] portable across back-ends.
 
-{[open Mirage_OS
-let _ = OS.Main.at_enter ...]} *)
-module OS : sig
-  module Lifecycle : sig
-    val await_shutdown_request :
-      ?can_poweroff:bool ->
-      ?can_reboot:bool ->
-      unit -> [`Poweroff | `Reboot] Lwt.t
-  end
+{[
+let _ = OS.Main.at_enter_iter ...]} *)
+module Main : sig
+  val at_enter_iter : (unit -> unit) -> unit
+  val run : unit Lwt.t -> unit
+end
 
-  module Main : sig
-    val run : unit Lwt.t -> unit
-    val at_enter : (unit -> unit Lwt.t) -> unit
-    val at_exit_iter  : (unit -> unit) -> unit
-    val at_enter_iter : (unit -> unit) -> unit
-  end
-
-  module Time : sig
-    val sleep_ns : int64 -> unit Lwt.t
-  end
+module Time : sig
+  val sleep_ns : int64 -> unit Lwt.t
 end
